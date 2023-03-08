@@ -1,0 +1,277 @@
+.navbar {
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+
+  &.scrolled {
+    background-color: black;
+
+    @media only screen and (max-width: 700px) {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .container {
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+
+    .toggler {
+      display: none;
+      .sidebar {
+        display: none;
+      }
+      .burger {
+        display: none;
+      }
+      @media only screen and (max-width: 700px) {
+        display: block;
+        cursor: pointer;
+        .burger {
+          left: 0;
+          position: relative;
+          display: block;
+          color: white;
+          width: 25px;
+          height: 3px;
+          background-color: white;
+          margin-bottom: 5px;
+        }
+
+        .upper {
+          transform: translateY(4px) rotate(45deg);
+        }
+
+        .middle {
+          display: none;
+        }
+
+        .lower {
+          transform: translateY(-4px) rotate(-45deg);
+        }
+
+        .sidebar {
+          display: block;
+          position: absolute;
+          list-style: none;
+          background-color: #000000;
+          width: 80%;
+          height: 100vh;
+          z-index: 99999;
+          left: -100%;
+          top: 6.5vh;
+
+          hr {
+            position: relative;
+            right: 5%;
+            width: 100%;
+            margin: 20px 0;
+            border: 1px solid grey;
+          }
+          .profile {
+            display: flex;
+            align-items: center;
+            h2 {
+              align-self: flex-end;
+              margin-left: 10px;
+            }
+            margin: 20px 0;
+            img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+
+          .settings {
+            margin: 10px 0;
+          }
+          .routes {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+          }
+        }
+        .opened {
+          left: 0 !important;
+        }
+      }
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      img {
+        height: 50px;
+        margin-right: 40px;
+        @media only screen and (max-width: 700px) {
+          position: relative;
+          left: -100px;
+          top: -3px;
+        }
+      }
+
+      span {
+        margin-right: 20px;
+        cursor: pointer;
+        @media only screen and (max-width: 700px) {
+          display: none;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      span {
+        @media only screen and (max-width: 700px) {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 700px) {
+        .searchbox {
+          .searchbox__input {
+            border: 1px solid white;
+            padding: 3px 10px;
+            background-color: #251c0f;
+            &:focus {
+              outline: none;
+              border: 2px solid white;
+            }
+          }
+        }
+      }
+
+      @media only screen and (min-width: 701px) {
+        .searchbox {
+          position: relative;
+          display: block;
+          width: 100%;
+          max-width: 53px;
+          transition: 0.4s linear;
+          overflow: hidden;
+
+          .searchbox__input {
+            display: block;
+            appearance: none;
+            width: 90%;
+            margin-right: 10px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: #24233a;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.4s linear;
+
+            &::placeholder {
+              color: transparent;
+            }
+          }
+
+          .searchbox__icon {
+            position: absolute;
+            right: calc(53px / 2);
+            top: 50%;
+            transform: translate(50%, -50%);
+
+            width: 30px;
+            height: 30px;
+
+            pointer-events: none;
+
+            path {
+              fill: white;
+              transition: 0.4s linear;
+            }
+          }
+
+          &:focus-within {
+            max-width: 250px;
+
+            .searchbox__input {
+              align-items: center;
+              display: flex;
+              border: 1px solid white;
+              background-color: black;
+              opacity: 0.8;
+              box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+              &::placeholder {
+                padding-left: 40px;
+                font-size: 15px;
+                color: white;
+              }
+            }
+
+            .searchbox__icon {
+              left: -25px;
+              path {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+
+      .icon {
+        margin: 0px 15px;
+        cursor: pointer;
+        @media only screen and (max-width: 700px) {
+          display: none;
+        }
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        object-fit: cover;
+        cursor: pointer;
+        @media only screen and (max-width: 700px) {
+          display: none;
+        }
+      }
+
+      .profile {
+        @media only screen and (max-width: 700px) {
+          display: none;
+        }
+        .options {
+          display: none;
+          background-color: var(--main-color);
+          border-radius: 5px;
+        }
+
+        span {
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        .opt {
+          padding: 10px;
+          cursor: pointer;
+          text-decoration: none;
+          color: white;
+        }
+
+        &:hover {
+          .options {
+            width: 80px;
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
