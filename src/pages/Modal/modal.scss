@@ -1,0 +1,350 @@
+body {
+  background-color: black;
+}
+.modalBackground {
+  display: flex;
+  justify-content: center;
+  top: 10%;
+  z-index: 9999;
+  left: 30%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  width: 70vh;
+  height: auto;
+  background-color: black;
+}
+
+.modalContainer {
+  position: relative;
+  .cancelButton {
+    position: absolute;
+    left: 560px;
+    top: 10px;
+    z-index: 9999;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #181818;
+    cursor: pointer;
+
+    .icon {
+      scale: 1;
+      color: white;
+    }
+  }
+}
+
+.title {
+  background-color: #181818;
+  padding: 0;
+  video {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    border: none;
+    object-fit: cover;
+  }
+
+  .logo {
+    position: absolute;
+    margin-top: 80px;
+    right: 170px;
+    scale: 0.4;
+  }
+
+  .buttons {
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    scale: 0.8;
+
+    .playButton {
+      padding: 8px 30px;
+      border: none;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      font-weight: 500;
+      margin-right: 15px;
+      cursor: pointer;
+
+      .play_icon {
+        scale: 1.5;
+        margin-right: 15px;
+      }
+    }
+
+    .icon {
+      background-color: #181818;
+      color: white;
+      margin-right: 15px;
+      scale: 1.2;
+      border: 1px solid #5e5d5d;
+      border-radius: 50%;
+      padding: 5px;
+    }
+  }
+}
+
+.body {
+  display: flex;
+  width: 100%;
+
+  background-color: #181818;
+
+  .infos {
+    padding: 40px;
+    .info_materials {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      .match {
+        color: #42c262;
+        font-weight: 800;
+        margin-right: 10px;
+      }
+      .year {
+        color: white;
+        font-weight: 400;
+        margin-right: 10px;
+      }
+
+      .limit {
+        color: white;
+        margin-right: 10px;
+        border: 1px solid #747474;
+        padding: 1px 5px;
+      }
+
+      .seasons {
+        color: white;
+        font-weight: 400;
+        margin-right: 10px;
+      }
+
+      .hd {
+        color: white;
+        border: 1px solid white;
+        padding: 1px 5px;
+        font-size: 10px;
+      }
+      .subts {
+        color: white;
+        margin-left: 10px;
+      }
+    }
+
+    .desc {
+      color: white;
+    }
+  }
+
+  .seriesInfo {
+    color: white;
+    padding-top: 30px;
+    .infoTitles {
+      color: #5e5d5d;
+    }
+  }
+}
+
+.episodes {
+  background-color: #181818;
+  .title_episodes {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      color: white;
+      font-weight: 400;
+    }
+    select {
+      border-radius: 5px;
+      border-color: #5e5d5d;
+      padding: 0 10px;
+      color: white;
+      background-color: #383737;
+      width: 150px;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+
+  .episode {
+    margin: 0 auto;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .h_line {
+      width: 98%;
+      border: 1px solid #383737;
+    }
+    .first_episode {
+      background-color: #383737;
+    }
+
+    .episode_container {
+      display: flex;
+      align-items: center;
+
+      border-radius: 10px;
+      .epsiode_number {
+        font-size: 40px;
+        color: white;
+        padding: 0 50px;
+      }
+      img {
+        width: 150px;
+        height: 100px;
+        padding-right: 40px;
+        border-radius: 5px;
+      }
+
+      .episode_header {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+      }
+
+      p {
+        width: 80%;
+        color: white;
+      }
+    }
+  }
+}
+
+.suggestions {
+  padding-top: 10px;
+  width: 100%;
+  background-color: #181818;
+  .suggestHeader {
+    h2 {
+      padding: 0 30px;
+      color: white;
+    }
+  }
+
+  .suggest_containers {
+    width: 95%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .suggest_elements {
+      position: relative;
+      background-color: #2f2f2f;
+      width: 33%;
+      height: 380px;
+      border-radius: 5px;
+      margin: 8px;
+
+      p {
+        position: relative;
+        color: white;
+        scale: 0.9;
+        bottom: 30px;
+      }
+
+      .suggest_info {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 10px;
+
+        .suggest_stats {
+          margin-top: 10px;
+          margin-left: 10px;
+          .match {
+            color: #42c262;
+            font-weight: 800;
+          }
+          .suggest_sub_stats {
+            margin-top: 10px;
+            .limit {
+              color: white;
+              border: 1px solid #747474;
+              padding: 1px 5px;
+              margin-right: 10px;
+            }
+
+            .release {
+              color: white;
+            }
+          }
+        }
+
+        .suggest_icon {
+          color: white;
+          margin: 5px 15px;
+          border: 1px solid #747474;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          padding: 3px;
+          background-color: #2a2a2a;
+        }
+      }
+      img {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+      }
+    }
+  }
+
+  .h_line_suggest {
+    position: relative;
+    top: 20px;
+    width: 93%;
+    border: 1px solid #383737;
+    background-color: #181818;
+  }
+
+  .down_arrow {
+    position: relative;
+    color: white;
+    left: 47.5%;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #747474;
+    border-radius: 50%;
+    background-color: #2a2a2a;
+  }
+}
+
+.about {
+  background-color: #181818;
+  .about_container {
+    padding: 50px;
+    .about_header {
+      color: white;
+    }
+
+    .infoTitles {
+      color: #5e5d5d;
+    }
+
+    p {
+      color: white;
+
+      .limit {
+        color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 1px solid #747474;
+        padding: 1px 5px;
+      }
+    }
+  }
+}
